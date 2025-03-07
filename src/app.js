@@ -13,8 +13,11 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-app.use('/api/v1/standups', standupRoutes);
-app.use('/api/v1/users', standupRoutes);
+//app.use('/api/v1/standups', standupRoutes);
+//app.use('/api/v1/users', standupRoutes);
+
+app.use('/v1/standups', standupRoutes);
+app.use('/v1/users', standupRoutes);
 
 // Error handling
 app.use((err, req, res, next) => {
